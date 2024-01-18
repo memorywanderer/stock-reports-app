@@ -55,7 +55,7 @@ export const StockTable = () => {
               <TH>Валюта</TH>
               <TH>Отклонение</TH>
               <TH>Отклонение (%)</TH>
-              <TH>Дата</TH>
+              <TH>Дата / Время</TH>
             </HeadTableRow>
           </thead>
           <tbody>

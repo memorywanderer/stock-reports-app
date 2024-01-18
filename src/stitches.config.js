@@ -7,6 +7,9 @@ export const {
   getCssText,
   theme
 } = createStitches({
+  fonts: {
+    default: "PPNeueMontreal"
+  },
   theme: {
     colors: {
       accent: "#2e2ee5",
@@ -37,32 +40,34 @@ export const darkTheme = createTheme({
   }
 });
 
-const globalStyles = globalCss({
+export const globalStyles = globalCss({
   "@font-face": [
     {
       fontWeight: 350,
       fontStyle: "normal",
       fontFamily: "PPNeueMontreal",
-      fontDisplay: "optional",
+      fontDisplay: "swap",
       src: 'local("PPNeueMontreal"), url("/fonts/PPNeueMontreal-Book.woff") format("woff")',
     },
     {
       fontWeight: 500,
       fontStyle: "normal",
       fontFamily: "PPNeueMontreal",
-      fontDisplay: "optional",
+      fontDisplay: "swap",
       src: 'local("PPNeueMontreal"), url("/fonts/PPNeueMontreal-Medium.woff") format("woff")',
     },
     {
       fontWeight: 700,
       fontStyle: "normal",
       fontFamily: "PPNeueMontreal",
-      fontDisplay: "optional",
+      fontDisplay: "swap",
       src: 'local("PPNeueMontreal"),url("/fonts/PPNeueMontreal-Bold.woff") format("woff")',
     },
   ],
 
   "body": {
+    fontFamily: "PPNeueMontreal",
+    fontWeight: "350",
     maxWidth: "1700px",
     margin: "0 auto",
     padding: "0 14px",
@@ -71,4 +76,3 @@ const globalStyles = globalCss({
   },
 });
 
-globalStyles();

@@ -5,8 +5,10 @@ import ColourModeProvider, { ColourModeContext } from "./providers/ColourModePro
 import { Icons } from './components/Icons';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { globalStyles } from './stitches.config';
 
 function App() {
+  globalStyles()
   return (
     <ColourModeProvider>
       <Header>
