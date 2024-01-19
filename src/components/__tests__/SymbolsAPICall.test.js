@@ -6,7 +6,7 @@ jest.mock('axios');
 
 describe('symbolsService', () => {
   test('getSymbols function', async () => {
-    // Mock the axios.get function
+
     axios.get.mockResolvedValue({
       data: [
         { symbol: 'AAPL', name: 'Apple Inc.' },

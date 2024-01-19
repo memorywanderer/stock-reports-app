@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getStocks, reset } from "../features/stocks/stocksSlice";
+import { getStocks } from "../features/stocks/stocksSlice";
 import { useSymbols } from "./useSymbols";
 
 export const useStocks = () => {
   const {
     symbols,
-    symbolsStatus,
-    symbolsError
+    symbolsStatus
   } = useSymbols();
 
   const {
@@ -32,7 +31,7 @@ export const useStocks = () => {
     };
 
     fetchStocks();
-  }, [dispatch, symbolsStatus, symbols, currentPage, itemsPerPage]);
+  }, [dispatch, stocksStatus, symbolsStatus, symbols, currentPage, itemsPerPage]);
 
   return {
     stocks,

@@ -30,7 +30,7 @@ const ColorModeToggleButton = () => {
     <ColourModeContext.Consumer>
       {(context) => (
         <Button color="secondary" onClick={context.cycleToggleMode}>
-          {context.colorMode === 'dark' ? <Icons.sun /> : <Icons.moon />}
+          {context.colorMode === 'dark' ? <Icons.Sun /> : <Icons.Moon />}
         </Button>
       )}
     </ColourModeContext.Consumer>

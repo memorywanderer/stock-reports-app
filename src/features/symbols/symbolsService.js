@@ -1,5 +1,5 @@
 import axios from 'axios'
-const API_URL = "https://cloud.iexapis.com/stable/ref-data/symbols?token=pk_4cf18475069c487aab4a1f146b8dd39e"
+const API_URL = `${process.env.REACT_APP_API_BASE_URL}/stable/ref-data/symbols?token=${process.env.REACT_APP_API_KEY}`
 
 const getSymbols = async () => {
   const response = await axios.get(API_URL)

@@ -15,7 +15,7 @@ export const useSymbols = () => {
       dispatch(getSymbols())
     }
 
-  }, [dispatch, symbols])
+  }, [dispatch, symbols, symbolsStatus])
 
   return {
     symbols,
